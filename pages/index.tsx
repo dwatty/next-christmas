@@ -1,47 +1,60 @@
 import Head from "next/head";
 import Link from "next/link";
-import Layout, { siteTitle } from "../components/layout";
-import { getSortedPostsData } from "../lib/products";
+import HotProducts from "../components/hot-products/hot-products";
+import Layout, { siteTitle } from "../components/layout/layout";
+import { getHotProducts, getSortedPostsData } from "../lib/products";
 import utilStyles from "../styles/utils.module.scss";
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
+interface IProps {
+    allPostsData: any[];
+    hotProducts: any[];
 }
 
-export default function Home({ allPostsData }) {
-  return (
-    <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+export async function getStaticProps() {
+    const allPostsData = getSortedPostsData();
+    const hotProducts = getHotProducts();
+    return {
+        props: {
+            allPostsData,
+            hotProducts,
+        },
+    };
+}
 
-      <section className={utilStyles.headingMd}>
-        <p>Home</p>
-        <p>I don't know</p>
+export default function Home(props: IProps) {
+    const makeList = () => {};
 
-        <Link href="/categories/game-category">View Games Category</Link>
-      </section>
+    return (
+        <Layout home>
+            <Head>
+                <title>{siteTitle}</title>
+            </Head>
 
-      {/* Add this <section> tag below the existing <section> tag */}
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
-            </li>
-          ))}
-        </ul>
-      </section>
-    </Layout>
-  );
+            <button onClick={makeList}>Make a List</button>
+
+            <section className={utilStyles.headingMd}>
+                <p>Home</p>
+                <Link href="/categories/game-category">View Games Category</Link>
+            </section>
+
+            <HotProducts products={ props.hotProducts } />
+
+            {/*             
+            <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+                <h2 className={utilStyles.headingLg}>Blog</h2>
+                <ul className={utilStyles.list}>
+                    {props.allPostsData.map(({ id, date, title }) => (
+                        <li className={utilStyles.listItem} key={id}>
+                            {title}
+                            <br />
+                            {id}
+                            <br />
+                            {date}
+                        </li>
+                    ))}
+                </ul>
+            </section> */}
+
+        </Layout>
+    );
 }
