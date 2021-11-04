@@ -19,7 +19,7 @@ const parseMarkdwon = (fileName: string) => {
     const fullPath = path.join(productsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
-    // Use gray-matter to parse the post metadata section
+    // Use gray-matter to parse the product metadata section
     const matterResult = matter(fileContents);
 
     // Combine the data with the id
@@ -29,49 +29,22 @@ const parseMarkdwon = (fileName: string) => {
     };
 };
 
-export function getSortedPostsData() {
-    // Get file names under /posts
-    const fileNames = fs.readdirSync(productsDirectory);
-    const allPostsData = fileNames.map((fileName) => parseMarkdwon(fileName));
-
-    // Sort posts by date
-    return allPostsData.sort(({ date: a }: any, { date: b }: any) => {
-        if (a < b) {
-            return 1;
-        } else if (a > b) {
-            return -1;
-        } else {
-            return 0;
-        }
-    });
-}
-
 /**
  * Get some "hot" products for the home page
  * @returns 9 random products
  */
 export function getHotProducts() {
     const fileNames = fs.readdirSync(productsDirectory);
-    const allPostsData = fileNames.map((fileName) => parseMarkdwon(fileName));
-    return allPostsData.slice(0, 9);
+    const allProductData = fileNames.map((fileName) => parseMarkdwon(fileName));
+    return allProductData.slice(0, 9);
 }
 
-export function getAllPostIds() {
+/**
+ * Get all products IDs for routing 
+ * @returns An array of product IDs
+ */
+export function getAllProductIds() {
     const fileNames = fs.readdirSync(productsDirectory);
-
-    // Returns an array that looks like this:
-    // [
-    //   {
-    //     params: {
-    //       id: 'ssg-ssr'
-    //     }
-    //   },
-    //   {
-    //     params: {
-    //       id: 'pre-rendering'
-    //     }
-    //   }
-    // ]
     return fileNames.map((fileName) => {
         return {
             params: {
@@ -81,11 +54,16 @@ export function getAllPostIds() {
     });
 }
 
-export async function getPostData(id) {
+/**
+ * Get product details
+ * @param id The product ID
+ * @returns A markdown blob of the file with metadata
+ */
+export async function getProductData(id) {
     const fullPath = path.join(productsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
-    // Use gray-matter to parse the post metadata section
+    // Use gray-matter to parse the products metadata section
     const matterResult = matter(fileContents);
 
     // Use remark to convert markdown into HTML string

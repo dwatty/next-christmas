@@ -1,5 +1,6 @@
 import Layout from "../../components/layout/layout";
 import Head from "next/head";
+import Image from 'next/image';
 import { getAllProductIds, getProductData } from "../../lib/products";
 import utilStyles from "../../styles/utils.module.scss";
 
@@ -43,13 +44,24 @@ export async function getStaticProps({ params }) {
  * @param param0 
  * @returns 
  */
-export default function Category(props : IProps) {
+export default function Product(props : IProps) {
   return (
     <Layout home={false}>
+
       <Head>
         <title>{props.productData.title}</title>
       </Head>
+
       <article>
+
+        <div>
+            <Image 
+                src={ props.productData.img }
+                layout="fill"
+                objectFit="contain" 
+            />
+        </div>
+
         <h1 className={utilStyles.headingXl}>{props.productData.title}</h1>
         <div className={utilStyles.lightText}>
           { props.productData.date }
