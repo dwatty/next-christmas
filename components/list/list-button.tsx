@@ -12,7 +12,7 @@ export default function ListButton() {
     };
 
     return <button className={ styles.button } onClick={ toggleList }>
-        <img src="/scroll.svg" />
+        <img src="/scroll.svg" /> View
         {
             listState.totalQuantity > 0
                 ? <span>{listState.totalQuantity }</span>
