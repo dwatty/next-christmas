@@ -3,8 +3,20 @@ import { useListContext, useUiContext } from "../../context/context";
 import { UiActionType } from "../../context/reducer-ui";
 
 export default function ListButton() {
-    const { uiState, uiDispatch } = useUiContext();
+
+    const { uiDispatch } = useUiContext();
     const { listState } = useListContext();
 
-    return <button className={ styles.button } onClick={() => uiDispatch({ type: UiActionType.ToggleLst })}>Show List</button>
+    const toggleList = () => {
+        uiDispatch({ type: UiActionType.ToggleLst });
+    };
+
+    return <button className={ styles.button } onClick={ toggleList }>
+        <img src="/scroll.svg" />
+        {
+            listState.totalQuantity > 0
+                ? <span>{listState.totalQuantity }</span>
+                : null
+        }
+    </button>
 }

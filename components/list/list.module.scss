@@ -34,4 +34,33 @@
     top: 1rem;
     right: 1rem;
     z-index: 2;
+    border-radius: 20rem;
+    background-color: $bright_green;
+    box-shadow: 2px 2px 1px $green_drop_shadow;
+    color: $white;
+    border: none;
+
+    &:hover {
+        background-color: darken($green_drop_shadow, 10%);
+    }
+
+    img {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    span {
+        display: block;
+        position: absolute;
+        border-radius: 20rem;
+        color: $white;
+        left: -1rem;
+        top: 1.5rem;
+        font-size: .8rem;
+        height: 2rem;
+        width: 2rem;
+        line-height: 2rem;
+        background-color: $bright_green;
+        box-shadow: 2px 2px 1px $green_drop_shadow;
+    }
 }
