@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+
+.item {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: $white;
+    box-shadow: 1px 1px 1px $light_grey;
+    transition: all .1s linear;
+    text-decoration: none;
+    color: $black;
+    
+    .itemName {
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .imageContainer {
+        position: relative;
+        width: 150px; 
+        height: 150px;
+    }
+
+    &:hover {
+        transform: scale(1.02);
+        cursor: pointer;
+    }
+}

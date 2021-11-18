@@ -3,16 +3,13 @@
     "description": "Beacuse you need some cheaper ideas on your list.",
     "products": [
         {
-            "id": "activity_dumbbells.md",
-            "name": "Dumbbelss"
+            "id": "clothes_slippers"
         },
         {
-            "id": "activity_golfbag.md",
-            "name": "Golf Bag"
+            "id": "clothes_uglysweater"
         },
         {
-            "id": "activity_soccerball.md",
-            "name": "Soccerball"
+            "id": "clothes_undies"
         }
     ]
 }

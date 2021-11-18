@@ -64,9 +64,9 @@ export default function List() {
                         </Link>
                     ))}
                     <div className={styles.prices}>
-                        <p>Subtotal: ${listState.subtotal}</p>
-                        <p>Tax: ${listState.tax}</p>
-                        <p>Total: ${listState.total}</p>
+                        <p className={styles.subtotal}>Subtotal: ${listState.subtotal}</p>
+                        <p className={styles.tax}>Tax: ${listState.tax}</p>
+                        <p className={styles.total}>Total: ${listState.total}</p>
                     </div>
                 </>
             ) : (

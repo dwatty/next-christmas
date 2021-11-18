@@ -38,7 +38,6 @@ export async function getProductData(id:string) {
     return getMarkdownData(productsDirectory, id);
 }
 
-
 function getRandom(arr, n) {
     var result = new Array(n),
         len = arr.length,

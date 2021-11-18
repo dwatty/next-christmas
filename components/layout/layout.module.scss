@@ -16,6 +16,10 @@
     flex-direction: column;
     padding: 0 .5rem 0 .5rem;
 
+    a {
+        text-decoration: none;
+    }
+    
     h1 {
         line-height: 1.2;
         font-weight: 800;
@@ -28,6 +32,11 @@
 
         &.subhead {
             font-size: 10vmax;
+            text-decoration: none;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         span {

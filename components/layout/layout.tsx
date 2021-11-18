@@ -33,18 +33,20 @@ export default function Layout({ children, home }) {
                         </span>
                     </h1>
                 ) : (
-                    <Link href="/">
-                        <h1 className={styles.subhead}>
-                            <span>
-                                Next&nbsp;
-                                <br /> Christmas&nbsp;
-                            </span>
-                        </h1>
+                    <Link href="/" passHref={true}>
+                        <a>
+                            <h1 className={styles.subhead}>
+                                <span>
+                                    Next&nbsp;
+                                    <br /> Christmas&nbsp;
+                                </span>
+                            </h1>
+                        </a>
                     </Link>
                 )}
             </header>
 
-            { /* CSS Lights */}
+            {/* CSS Lights */}
             {home ? <Lights /> : null}
 
             <main>{children}</main>

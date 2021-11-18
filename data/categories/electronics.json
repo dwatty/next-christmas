@@ -3,16 +3,13 @@
     "description": "Things you actually want this year.",
     "products": [
         {
-            "id": "activity_dumbbells.md",
-            "name": "Dumbbelss"
+            "id": "electronic_computer"
         },
         {
-            "id": "activity_golfbag.md",
-            "name": "Golf Bag"
+            "id": "electronic_iphone"
         },
         {
-            "id": "activity_soccerball.md",
-            "name": "Soccerball"
+            "id": "electronic_switch"
         }
     ]
 }
