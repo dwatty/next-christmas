@@ -63,4 +63,44 @@
     border: #ffd000;
     padding: .4rem 1rem;
     margin: 1rem 0 1rem 0;
+    transition: all .3s ease-in;
+    text-decoration: none;
+
+    &:hover {
+        background-color: lighten(#ffd000, 10%);
+        border: lighten(#ffd000, 10%);
+        text-decoration: none;
+    }
+}
+
+.fourohfour {
+    background-color: #FF0000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    div {
+        margin-top: 10rem;
+        text-align: center;
+
+        h1 {
+            font-size: 6rem;
+            font-weight: lighter;
+        }
+
+        a { 
+            color: white;
+        }
+    }
+}
+
+.tileGrid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
 }

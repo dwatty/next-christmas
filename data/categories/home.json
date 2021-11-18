@@ -3,16 +3,13 @@
     "description": "Stuff guaranteed to make your home look homey.",
     "products": [
         {
-            "id": "activity_dumbbells.md",
-            "name": "Dumbbelss"
+            "id": "home_comforter"
         },
         {
-            "id": "activity_golfbag.md",
-            "name": "Golf Bag"
+            "id": "home_knifeblock"
         },
         {
-            "id": "activity_soccerball.md",
-            "name": "Soccerball"
+            "id": "home_potspans"
         }
     ]
 }

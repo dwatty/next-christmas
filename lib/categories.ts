@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { getMarkdownData, parseJSON } from "./markdown-utils";
+import { getProductData } from "./products";
 
 const categoriesDirectory = path.join(process.cwd(), "data", "categories");
 
@@ -11,6 +12,19 @@ const categoriesDirectory = path.join(process.cwd(), "data", "categories");
 export function getAllCategories() {
     const fileNames = fs.readdirSync(categoriesDirectory);
     return fileNames.map((fileName) => parseJSON(categoriesDirectory, fileName));
+}
+
+export async function getProductsForCategory(categoryId:string) {
+    const result = await getCategoryData(categoryId);
+
+    for(let i = 0; i < result.products.length;i ++) {
+        const pData = await getProductData(result.products[i].id) as any;
+        result.products[i].title    = pData.title;
+        result.products[i].price    = pData.price;
+        result.products[i].img      = pData.img;
+    }
+
+    return result;
 }
 
 /**

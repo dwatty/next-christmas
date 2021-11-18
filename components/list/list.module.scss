@@ -74,6 +74,22 @@
             margin-bottom: 0;
         }
     }
+
+    .subtotal, .tax {
+        text-align: right;        
+    }
+
+    p.tax {
+        display: block;
+        margin-bottom: .5rem;
+    }
+
+    .total {
+        font-size: 2rem;
+        text-align: center;
+        font-weight: bold;
+        border-top: 2px solid $black;
+    }
 }
 
 .listBug {

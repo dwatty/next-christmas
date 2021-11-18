@@ -40,7 +40,7 @@ export const parseMarkdown = (directory : string, fileName: string) => {
     const fullPath = path.join(directory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
-    // Use gray-matter to parse the product metadata section
+    // Use gray-matter to parse the product metadata sectionz
     const jsonResult = JSON.parse(fileContents);
 
     // Combine the data with the id
