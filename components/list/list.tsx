@@ -13,6 +13,7 @@ export default function List() {
                 <Link key={itm.id} href={`/products/${itm.id}`}>
                     <div className={styles.item}>
                         <span>{itm.name}</span>
+                        <span>{itm.quantity}</span>
                     </div>
                 </Link>
             ))}

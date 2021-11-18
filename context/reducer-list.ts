@@ -1,4 +1,4 @@
-import { ListState } from "./context-types";
+import { ListItem, ListState } from "./context-types";
 
 export enum ListActionType {
     AddItem,
@@ -27,22 +27,40 @@ export interface DecrementQuantity {
 
 export type ListActions = AddItem | RemoveItem;
 
-export const initialListState : ListState = {
-    total: 10.00,
-    tax: 30.00,
-    items: [{
-        id: '1',
-        name: 'Switch',
-        price: 100.00,
-        quantity: 1
-    }],
-    subtotal: 40.00
-}
+export const initialListState: ListState = {
+    total: 10.0,
+    tax: 30.0,
+    items: [],
+    totalQuantity: 0,
+    subtotal: 40.0,
+};
 
 export function listReducer(state: ListState, action: ListActions) {
     switch (action.type) {
         case ListActionType.AddItem:
-            return {...state};
+            const s = {
+                ...state,
+            };
+
+            const existing = s.items.find((itm : ListItem) => {
+                return itm.id === action.payload.id
+            });
+
+            if(existing) {
+                existing.quantity++;
+            }
+            else {
+                s.items.push(action.payload);
+            }
+
+            const totalCount = s.items.reduce((prev : number, curr : ListItem) => {
+                return prev + curr.quantity;
+            },0);
+
+            s.totalQuantity = totalCount;
+
+
+            return s;
         default:
             return state;
     }

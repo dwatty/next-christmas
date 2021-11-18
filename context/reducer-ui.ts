@@ -2,7 +2,7 @@ import { UiState } from "./context-types";
 
 export enum UiActionType {
     ToggleLst,
-    ShowToast
+    ShowToast,
 }
 
 export interface TogglerList {
@@ -10,15 +10,15 @@ export interface TogglerList {
 }
 
 export interface ShowToast {
-    type: UiActionType.ShowToast,
-    payload: any
+    type: UiActionType.ShowToast;
+    payload: any;
 }
 
 export type UiActions = TogglerList | ShowToast;
 
-export const initialUiState : UiState = {
+export const initialUiState: UiState = {
     isListOpen: false
-}
+};
 
 export function uiReducer(state: UiState, action: UiActions) {
     switch (action.type) {

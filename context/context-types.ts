@@ -7,6 +7,7 @@ export type ListState = {
     tax: number;
     total: number;
     items: ListItem[];
+    totalQuantity: number;
 }
 
 export type ListItem = {
