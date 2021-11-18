@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.container {
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1rem 0;
+    grid-template-columns: repeat(5, 1fr);
+
+    .item {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: $bright_green;
+        box-shadow: 5px 5px 1px limegreen;
+        color: $white;
+        border-radius: .5rem;
+        transition: all .1s linear;
+
+        button {
+            
+        }
+
+        &:hover {
+            transform: scale(1.02);
+            cursor: pointer;
+        }
+    }
+}
+
+.presentIcon {
+    height: 2rem;
+    padding: .4rem;
+}

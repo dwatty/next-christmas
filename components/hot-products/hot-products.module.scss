@@ -1,0 +1,34 @@
+@import '../../styles/variables.scss';
+
+.container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    .item {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: $white;
+        box-shadow: 2px 2px 1px $black;
+        transition: all .1s linear;
+
+        .imageContainer {
+            position: relative;
+            width: 150px; 
+            height: 150px;
+        }
+
+        button {
+            
+        }
+
+        &:hover {
+            transform: scale(1.02);
+            cursor: pointer;
+        }
+    }
+}

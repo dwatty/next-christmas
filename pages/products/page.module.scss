@@ -1,0 +1,27 @@
+
+.splitView {
+    display: flex;   
+}
+
+.leftCol {
+    flex-grow: 1;
+
+    .imageContainer {
+        position: relative;
+        width: 20rem;
+        height: 20rem;
+        margin: 2rem;
+    }    
+}
+
+.rightCol {
+    flex-grow: 2;
+    padding: 0 2rem 4rem 0;
+}
+
+.addBtn {
+    background-color: #ffd000;
+    border: #ffd000;
+    padding: .4rem 1rem;
+    margin: 0;
+}

@@ -1,47 +1,38 @@
 import Head from "next/head";
-import Link from "next/link";
-import Layout, { siteTitle } from "../components/layout";
-import { getSortedPostsData } from "../lib/products";
-import utilStyles from "../styles/utils.module.scss";
+import CategoryList from "../components/category-list/category-list";
+import Footer from "../components/footer/footer";
+import HotProducts from "../components/hot-products/hot-products";
+import Layout, { siteTitle } from "../components/layout/layout";
+import Lights from "../components/lights/lights";
+import { getAllCategories } from "../lib/categories";
+import { getHotProducts } from "../lib/products";
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
+interface IProps {
+    hotProducts: any[];
+    categories: any[];
 }
 
-export default function Home({ allPostsData }) {
-  return (
-    <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+export async function getStaticProps() {
+    const hotProducts = getHotProducts();
+    const categories = getAllCategories();
 
-      <section className={utilStyles.headingMd}>
-        <p>Home</p>
-        <p>I don't know</p>
+    return {
+        props: {
+            hotProducts,
+            categories
+        },
+    };
+}
 
-        <Link href="/categories/game-category">View Games Category</Link>
-      </section>
-
-      {/* Add this <section> tag below the existing <section> tag */}
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
-            </li>
-          ))}
-        </ul>
-      </section>
-    </Layout>
-  );
+export default function Home(props: IProps) {
+    return (
+        <Layout home>
+            <Head>
+                <title>{siteTitle}</title>
+            </Head>
+            <HotProducts products={ props.hotProducts } />
+            <CategoryList categories={ props.categories } />
+            <Footer />
+        </Layout>
+    );
 }
