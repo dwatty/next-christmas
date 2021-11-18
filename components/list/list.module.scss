@@ -37,6 +37,10 @@
     }
 
     .quantityPicker {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
         button {
             padding: .4rem;
             border: none;
