@@ -37,8 +37,8 @@ export default function HotProducts(props: IProps) {
                 {props.products.map((itm: any) => (
                     <Link key={itm.id} href={`/products/${itm.id}`}>
                         <div className={styles.item}>
-                            <span>{itm.title}</span>
-                            <span>{itm.price}</span>
+                            <span className={ styles.itemName }>{itm.title}</span>
+                            <span>${itm.price}</span>
                             {itm.img ? (
                                 <div className={styles.imageContainer}>
                                     <Image src={itm.img} layout="fill" objectFit="contain" />

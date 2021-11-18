@@ -16,14 +16,14 @@
         box-shadow: 2px 2px 1px $black;
         transition: all .1s linear;
 
+        .itemName {
+            font-weight: bold;
+        }
+
         .imageContainer {
             position: relative;
             width: 150px; 
             height: 150px;
-        }
-
-        button {
-            
         }
 
         &:hover {

@@ -5,12 +5,12 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    right: -20rem;
+    right: -30rem;
     background-color: $white;
-    border-left: .2rem solid $black;
+    border-left: 0.2rem solid $black;
     z-index: 3;
     padding: 1rem;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
     box-shadow: -5px -5px 5px $light-grey;
 
     &.show {
@@ -18,7 +18,57 @@
     }
 
     .item {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        background-color: $off-white;
+        margin: 0.5rem 0 0.5rem 0;
+        padding: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            font-weight: bold;
+
+            i {
+                font-size: 0.8rem;
+                font-weight: normal;
+            }
+        }
+    }
+
+    .quantityPicker {
+        button {
+            padding: .4rem;
+            border: none;
+            background-color: $white;
+        }
+    }
+
+    .listHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            font-size: 1rem;
+        }
+    }
+
+    .closeList {
+        position: absolute;
+        top: 0.8rem;
+        right: 19.3rem;
+        border-radius: 20rem 0 0 20rem;
+        background-color: $black;
+        color: $white;
+        border: 0.2rem solid $black;
+    }
+
+    .prices {
+        p {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -28,15 +78,14 @@
     right: 1rem;
 }
 
-
-.button {    
+.button {
     position: fixed;
     top: 1rem;
     right: 1rem;
     z-index: 2;
     border-radius: 20rem;
-    background-color: $bright_green;
-    box-shadow: 2px 2px 1px $green_drop_shadow;
+    background-color: $green_drop_shadow;
+    box-shadow: 2px 2px 1px $bright_green;
     color: $white;
     border: none;
 
@@ -56,11 +105,11 @@
         color: $white;
         left: -1rem;
         top: 1.5rem;
-        font-size: .8rem;
+        font-size: 0.8rem;
         height: 2rem;
         width: 2rem;
         line-height: 2rem;
-        background-color: $bright_green;
-        box-shadow: 2px 2px 1px $green_drop_shadow;
+        background-color: $green_drop_shadow;
+        box-shadow: 2px 2px 1px $bright_green;
     }
 }
