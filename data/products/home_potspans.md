@@ -4,9 +4,9 @@ price: 599.99
 img: '/products/potspans.webp'
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+Prepare virtually anything with the Cuisinart Advantage Nonstick 11 Piece Cookware collection. An elegant metallic exterior that complements any kitchen décor lets cooks simmer, sauté, fry, boil and braise in style. The pure aluminum core provides quick and even heat while the premium nonstick surface provides lasting food release and easy cleanup. Fantastic results with dishwasher safe convenience.
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
-
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+- 8-piece nonstick cookware set includes 8-inch fry pan, 10-inch fry pan, 1.5-quart sauce pan with lid, 2 quart saucepan with lid, and 3-quart casserole pan with lid
+- Aluminum body with non-stick coating for easy cooking and cleaning--BPA-free
+- Comfortable soft-touch handles stay cool during use, vented glass lids let steam escape
+- Spiral bottom heats evenly, compatible with gas, electric, and glass stovetops (note: not induction compatible)

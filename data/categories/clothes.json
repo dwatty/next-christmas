@@ -1,0 +1,18 @@
+{
+    "name": "Clothes",
+    "description": "Beacuse you need some cheaper ideas on your list.",
+    "products": [
+        {
+            "id": "activity_dumbbells.md",
+            "name": "Dumbbelss"
+        },
+        {
+            "id": "activity_golfbag.md",
+            "name": "Golf Bag"
+        },
+        {
+            "id": "activity_soccerball.md",
+            "name": "Soccerball"
+        }
+    ]
+}

@@ -1,36 +1,29 @@
-import styles from "./hot-products.module.scss";
-import Image from 'next/image';
+import styles from "./category-list.module.scss";
+import utilStyles from "../../styles/utils.module.scss";
 import Link from 'next/link';
 
 interface IProps {
-    products : any[];
+    categories : any[];
 }
 
 export default function CategoryList(props : IProps) {
-  return (
+  return (<div>
+  <h2 className={utilStyles.heading2Xl } >View By Category</h2>
     <div className={styles.container}>
 
+        
         {
-            props.products.map((itm : any) =>
-                <Link href={`/products/${itm.id}`}>
+            props.categories.map((itm : any) =>
+                <Link key={itm.id} href={`/categories/${itm.id}`}>
                     <div className={styles.item}>
-                        <span>{ itm.title }</span>
-                        <span>{ itm.price }</span>
-                        {
-                            itm.img 
-                                ?    <div className={ styles.imageContainer }>
-
-                                    <Image src={ itm.img }         layout="fill"
-                                objectFit="contain" />
-                                </div>
-                                : null
-                        }
-                        <button>Add to List</button>
+                        <span>{ itm.name }</span>
+                        <img src="/giftbox.svg" alt="Present Icon" className={ styles.presentIcon } />
                     </div>
                 </Link> 
             )
         }
       
+    </div>
     </div>
   );
 }

@@ -1,14 +1,51 @@
+@import '../../styles/variables.scss';
+
 .container {
-    max-width: 45rem;
     padding: 0 1rem;
-    margin: 3rem auto 6rem;
+    margin: 0 auto 6rem;
+
+    main {
+        padding-top: 1rem;
+    }
   }
+
+
   
   .header {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: 0 .5rem 0 .5rem;
+
+    h1 {
+        line-height: 1.2;
+        font-weight: 800;
+        letter-spacing: -0.05rem;
+        margin: 1rem 0;
+        text-align: center;
+        padding: 1rem 0 1rem 0;
+        font-size: 17vmax;
+        text-align: left;
+
+        &.subhead {
+            font-size: 10vmax;
+        }
+
+        span {
+            background-color: $bright_green;
+            color: $white;
+            box-shadow: 15px 15px 1px limegreen;
+        }
+    }
+
+    h3 {
+        font-size: 1rem;
+        text-align: left;
+        display: block;
+        font-style: italic;
+    }
   }
+
+
   
   .backToHome {
     margin: 3rem 0 0;

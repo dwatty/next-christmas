@@ -1,0 +1,37 @@
+@import "../../styles/variables.scss";
+
+.container {
+    width: 20rem;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -20rem;
+    background-color: $white;
+    border-left: .2rem solid $black;
+    z-index: 3;
+    padding: 1rem;
+    transition: all .2s ease-in;
+    box-shadow: -5px -5px 5px $light-grey;
+
+    &.show {
+        right: 0;
+    }
+
+    .item {
+        font-size: 1.2rem;
+    }
+}
+
+.listBug {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+}
+
+
+.button {    
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+}

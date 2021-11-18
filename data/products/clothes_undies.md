@@ -4,9 +4,6 @@ price: 5.99
 img: '/products/undies.webp'
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+What Goes Underneath Is Important: Join Millions of Other Comfortable Men by Wearing UnderGents Brief Style Underwear. Feel the limitless CloudSoft comfort and style! We believe you will agree that UnderGents men's underwear are the most comfortable underwear you have ever worn, and you will be inspired every day, hence our flagship styles carry the Inspirato name. Finally, comfort underneath is possible for every man.
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
-
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+Cooling Breathable Moisture Wicking Microclimate: Our nature based CloudSoft micro modal fabric is multiple times softer & cooler than cotton or polyester. Unlike most underwear, made from those materials, UnderGents’ CloudSoft has incredible air permeability to keep you cool, dry, and fresh all day & night. No more swampy smelly hot box underwear. Remember, Polyester is a form of plastic, just like a garbage bag, so don’t wear garbage underwear, be comfortable in UnderGents!

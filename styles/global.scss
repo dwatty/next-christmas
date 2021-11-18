@@ -437,23 +437,6 @@
     display: none !important;
   }
   
-  @font-face {
-    font-family: 'FinkHeavy';
-    src: url('/assets/font/FinkHeavy.eot');
-    src: url('/assets/font/FinkHeavy.eot?#iefix') format('embedded-opentype'),
-        url('/assets/font/FinkHeavy.woff2') format('woff2'),
-        url('/assets/font/FinkHeavy.woff') format('woff'),
-        url('/assets/font/FinkHeavy.ttf') format('truetype'),
-        url('/assets/font/FinkHeavy.svg#FinkHeavy') format('svg');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  h1, h2, h3 {
-    font-family: 'FinkHeavy', Helvetica, Arial;
-  }
-  
   button {
     border: .1rem solid $grey;
     outline: none;

@@ -1,5 +1,12 @@
-import '../styles/global.scss';
+import { AppWrapper } from "../context/context";
+import "../styles/global.scss";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+function App({ Component, pageProps }) {
+    return (
+        <AppWrapper>
+            <Component {...pageProps} />
+        </AppWrapper>
+    );
 }
+
+export default App;

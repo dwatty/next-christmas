@@ -1,13 +1,14 @@
 import Layout from "../../components/layout/layout";
 import Head from "next/head";
-import { getAllProductIds, getProductData } from "../../lib/products";
+import Link from 'next/link';
 import utilStyles from "../../styles/utils.module.scss";
+import { getAllCategoryIds, getCategoryData } from "../../lib/categories";
 
 /**
  * Our Prop Definition
  */
 interface IProps {
-    productData: any
+    categoryData: any
 }
 
 /**
@@ -15,7 +16,7 @@ interface IProps {
  * @returns Paths to pre-render
  */
 export async function getStaticPaths() {
-    const paths = getAllProductIds();
+    const paths = getAllCategoryIds();
     return {
       paths,
       fallback: false,
@@ -29,10 +30,10 @@ export async function getStaticPaths() {
  * @returns The product data as markdown plus properties
  */
 export async function getStaticProps({ params }) {
-  const productData = await getProductData(params.id);
+  const categoryData = await getCategoryData(params.id);
   return {
     props: {
-      productData
+        categoryData
     } as IProps
   };
 }
@@ -47,14 +48,23 @@ export default function Category(props : IProps) {
   return (
     <Layout home={false}>
       <Head>
-        <title>{props.productData.title}</title>
+        <title>{props.categoryData.name}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{props.productData.title}</h1>
+        <h1 className={utilStyles.headingXl}>{props.categoryData.name}</h1>
         <div className={utilStyles.lightText}>
-          { props.productData.date }
+          { props.categoryData.description }
         </div>
-        <div dangerouslySetInnerHTML={{ __html: props.productData.contentHtml }} />
+        {
+            props.categoryData.products.map((itm : any) => 
+                <Link href={`/products/${itm.id}`}>
+                <div>
+                    <span>{ itm.name }</span>                    
+                    <button>Add to List</button>
+                </div>
+            </Link> 
+            )
+        }
       </article>
     </Layout>
   );

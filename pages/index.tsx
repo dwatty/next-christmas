@@ -1,47 +1,38 @@
 import Head from "next/head";
-import Link from "next/link";
+import CategoryList from "../components/category-list/category-list";
+import Footer from "../components/footer/footer";
 import HotProducts from "../components/hot-products/hot-products";
 import Layout, { siteTitle } from "../components/layout/layout";
+import Lights from "../components/lights/lights";
+import { getAllCategories } from "../lib/categories";
 import { getHotProducts } from "../lib/products";
-import utilStyles from "../styles/utils.module.scss";
 
 interface IProps {
     hotProducts: any[];
+    categories: any[];
 }
 
 export async function getStaticProps() {
     const hotProducts = getHotProducts();
+    const categories = getAllCategories();
+
     return {
         props: {
             hotProducts,
+            categories
         },
     };
 }
 
 export default function Home(props: IProps) {
-
-    const makeList = () => {};
-
     return (
         <Layout home>
-
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-
-            <button onClick={makeList}>New List +</button>
-
             <HotProducts products={ props.hotProducts } />
-
-            <section className={utilStyles.headingMd}>
-                <p>Home</p>
-                <Link href="/categories/game-category">View Games Category</Link>
-            </section>
-
-            <footer>
-                CLaaS - Christmas List as a Service &copy; 2021
-            </footer>
-
+            <CategoryList categories={ props.categories } />
+            <Footer />
         </Layout>
     );
 }

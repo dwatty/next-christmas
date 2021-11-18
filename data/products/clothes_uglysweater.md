@@ -4,9 +4,8 @@ price: 24.99
 img: '/products/uglysweater.webp'
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+Don’t wait to share the love and laughs! You and your friends and family can help spread the cheer in one of Tipsy Elves’ ugly christmas sweaters. Whether you’re celebrating and matching in person or just catching up online, Tipsy Elves’ hilarious holiday clothing will keep everyone looking cute, cozy and warm!
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
-
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+- Sweatshirt Feature:Long Sleeve, Crewneck, Christmas Sweatshirt With many funny pattern for choose.
+- Great for Christmas Gift for yourself,friends or family member,Suitable for Men/women/teen boy girls,also for couples
+- Funny Ugly Sweatshirt for Christmas, birthdays, thanksgiving, or any other special celebrations

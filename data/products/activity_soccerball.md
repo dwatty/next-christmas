@@ -4,9 +4,8 @@ price: 29.99
 img: '/products/soccerball.webp'
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+The Nike soccer ball is made of durable coating with contrasting graphics for precise touch and high visibility in the field.
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
-
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+- Visual acuity graphics to improve detection in the field
+- Resistant and smooth coating
+- Rubber inner tube to reduce air leaks and better shape retention

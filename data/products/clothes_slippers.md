@@ -4,17 +4,7 @@ price: 9.99
 img: '/products/slippers.webp'
 ---
 
-We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
+Luxury for everyone. That’s the idea behind the Fireside Collection: a line of slippers at an everyday price on superior quality competitive with other slipper brands. Perfect as a thoughtful gift for your loved ones, Fireside shearling slippers are sure to be their new favorite way to relax! Made with genuine Australian sheepskin lining, these affordable shearling slippers are a must for relaxing in style. But why shearling? Shearling boasts natural temperature-regulating and moisture-wicking properties. They’re a great blend of insulated and breathable, and a few of our styles even feature water-resistant designs to help protect you from the elements. Shearling is also known for its durability; these long-lasting slippers are sure to be favorites for years to come! 
 
-You can use Static Generation for many types of pages, including:
+Temperature-regulating and moisture-wicking slippers are perfect no matter the weather, and these indoor/outdoor slippers are built to handle the busiest of days. Our men’s shearling slippers, women’s shearling slippers, and kids’ shearling slippers are designed with unbeatable quality in mind.
 
-- Marketing pages
-- Blog posts
-- E-commerce product listings
-- Help and documentation
-
-You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
-
-On the other hand, Static Generation is **not** a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.
-
-In that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.

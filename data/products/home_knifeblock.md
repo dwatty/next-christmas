@@ -4,9 +4,6 @@ price: 49.99
 img: '/products/knifeblock.webp'
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+Whether you refer to it as a knife holder or as a knife block, a knives block holder is an essential accessory for any & every kitchen! The only thing is not all kitchen knife holders without knives are designed to offer the same dependability as ours. Wondering what makes our kitchen knife block preferred by home chefs & the pros? The answer is simple. We've cut absolutely NO corners when developing our universal knife block.
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
-
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+Since it's crafted out of solid acacia wood, the attractive design of this block knife holder draws the eye. It also offers durability that is virtually unmatched. We've created the heavy duty global knife block you can depend on!

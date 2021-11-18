@@ -4,9 +4,6 @@ price: 39.99
 img: '/products/pawpatrol.webp'
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+Launch and race to the rescue with the PAW Patrol Launch’N Haul PAW Patroller! This fan favorite team vehicle opens up, transforming into an action-packed track set for the PAW Patrol’s True Metal vehicles (each sold separately)! With storage room inside the large toy car for up to seven True Metal collectible vehicles, it’s easy to load up the pups action figures and roll onto exciting rescue missions. 
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
-
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+Kids can unfold the PAW Patroller to discover a track set with rescues to save the day, just like the hit TV show! This set includes an exclusive Robodog 1:55 scale metal die-cast vehicle! The fire needs to be put out; Robodog needs a tune-up; and a bear is trapped under fallen rocks! With three exciting rescue missions to complete, race to the rescue with the transforming 2-in-1 PAW Patrol Launch’N Haul PAW Patroller!

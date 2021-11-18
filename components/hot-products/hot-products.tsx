@@ -1,4 +1,5 @@
 import styles from "./hot-products.module.scss";
+import utilStyles from "../../styles/utils.module.scss";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,11 +8,12 @@ interface IProps {
 }
 
 export default function HotProducts(props : IProps) {
-  return (
+  return (<div>
+      <h2 className={utilStyles.heading2Xl } >Hot Products</h2>
     <div className={styles.container}>
     {
         props.products.map((itm : any) =>
-            <Link href={`/products/${itm.id}`}>
+            <Link key={ itm.id } href={`/products/${itm.id}`}>
                 <div className={styles.item}>
                     <span>{ itm.title }</span>
                     <span>{ itm.price }</span>
@@ -31,6 +33,7 @@ export default function HotProducts(props : IProps) {
             </Link> 
         )
     } 
+    </div>
     </div>
   );
 }

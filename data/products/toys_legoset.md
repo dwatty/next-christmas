@@ -4,9 +4,6 @@ price: 249.99
 img: '/products/legoset.webp'
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+Enjoy a festive build-and-play experience with the LEGO Creator Expert 10267 Gingerbread House. A treasure chest of magical details, this amazing model features frosted roofs with colorful candy buttons and a delicious facade with candy-cane columns, glittery windows and a tall chimney stack with a glowing fireplace. Inside the house there's an array of fun details and candy furnishings including a tasteful bedroom with chocolate bed and cotton candy lamp, and a bathroom with the essential toilet and bathtub. 
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
-
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+Children can light up the cozy fireplace by pressing on the chimney smoke, help clear the sidewalk with the snow blower and nestle the gingerbread baby in its carriage. It also includes a decorated holiday tree with wrapped gifts and toys, including a rocking horse and a toy train. This advanced LEGO set delivers a challenging and rewarding building experience and makes a great seasonal centerpiece for the home or office. Includes gingerbread man, woman and baby figures.

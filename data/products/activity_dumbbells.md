@@ -4,9 +4,12 @@ price: 199.99
 img: '/products/dumbbell.webp'
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+Training with dumbbells allows you to select resistance training exercises based on their similarity to actual movements that occurs during sports.
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
+Dumbbells require more balance than training with barbells or machines, and balance is crucial for optimal performance.
 
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+- Dumbbells are widely used in gyms and homes for various exercise purposes, a great tool for either full body workout, or specific muscle groups
+- High quality solid cast dumbbell encased in rubber, dumbbells will last throughout the years while protect your floor
+- Solid metal chrome finish contoured (ergo) handles designed to fit comfortably. Textured handle provides a tight and secure grip
+- Hexagon shape rubber encased heads help prevent rolling and provide easier storage
+- Dumbbells come in pairs or singles at your choice
