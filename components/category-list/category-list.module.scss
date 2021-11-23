@@ -4,7 +4,7 @@
     display: grid;
     grid-gap: 1rem;
     padding: 1rem 0;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 
     a {
         text-decoration: none;
@@ -13,13 +13,13 @@
     .item {
         display: flex;        
         position: relative;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 10px;
         background-color: $bright_green;
         box-shadow: 5px 5px 1px $green_drop_shadow;
-        color: $white;
+        color: $dark_green;
         transition: all .1s linear;
 
         &:hover {

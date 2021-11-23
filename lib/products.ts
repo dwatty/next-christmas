@@ -15,6 +15,15 @@ export function getHotProducts() {
 }
 
 /**
+ * Get all products
+ * @returns 9 random products
+ */
+ export function getAllProducts(skip: number, take: number) {
+    const fileNames = fs.readdirSync(productsDirectory);
+    return fileNames.map((fileName) => parseMarkdown(productsDirectory, fileName));
+}
+
+/**
  * Get all products IDs for routing 
  * @returns An array of product IDs
  */
